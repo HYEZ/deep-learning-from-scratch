@@ -20,7 +20,7 @@
 ## Usage
 ```
 $ cd ch01
-$ python man.py
+$ python practice_numpy.py
 
 $ cd ../ch05
 $ python train_nueralnet.py
