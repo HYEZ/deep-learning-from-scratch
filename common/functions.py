@@ -19,6 +19,18 @@ def img_show(img):
 def mean_squared_error(y, t):
 	return 0.5 * np.sum((y-t)**2)
 
+# def cross_entropy_error(y, t):
+# 	delta = 1e-7
+# 	return -np.sum(t * np.log(y + delta)) # log0 방지
+
 def cross_entropy_error(y, t):
+	print(y)
+	print("aa", y.ndim)
 	delta = 1e-7
-	return -np.sum(t * np.log(y + delta)) # log0 방지
+	if y.ndim == 1:
+		t = t.reshape(1, t.size)
+		y = y.reshape(1, y.size)
+	batch_size = y.shape[0]
+	print("batch_size", batch_size)
+	print(y[np.arange(batch_size), t])
+	return -np.sum(np.log(y[np.arange(batch_size), t])) / batch_size
