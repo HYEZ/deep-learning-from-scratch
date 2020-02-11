@@ -15,3 +15,10 @@ def softmax(a):
 def img_show(img):
 	pil_img = Image.fromarray(np.uint8(img))
 	pil_img.show()
+
+def mean_squared_error(y, t):
+	return 0.5 * np.sum((y-t)**2)
+
+def cross_entropy_error(y, t):
+	delta = 1e-7
+	return -np.sum(t * np.log(y + delta)) # log0 방지
