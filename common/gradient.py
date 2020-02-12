@@ -6,7 +6,8 @@ def numerical_gradient(f, x):
 	grad = np.zeros_like(x) # x와 형상이 같은 배열 생성
 	it = np.nditer(x, flags=['multi_index'], op_flags=['readwrite'])
 	while not it.finished:
-		idx = it.multi_index
+		idx = it.multi_index # 배열의 인덱스를 튜플로 반환
+		print(idx)
 		tmp_val = x[idx]
 
 		# f(x+h) 계산

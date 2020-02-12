@@ -30,6 +30,6 @@ print(net.loss(x, t))
 
 f = lambda w: net.loss(x, t)
 
-dW = numerical_gradient(f, net.W)
+dW = numerical_gradient(f, net.W) # 미분 한번 한 것! 경사하강법으로 기울기 0 되도록 점점 조정해 나갈 것.
 print(dW)
 
