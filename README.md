@@ -11,7 +11,7 @@
 |1|[헬로파이썬](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch1)|2020.02.10|2020.02.11|
 |2|[퍼셉트론](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch2)|2020.02.11|2020.02.11|
 |3|[신경망](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch3)|2020.02.11|2020.02.11|
-|4|[신경망 학습](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch4)|2020.02.11||
+|4|[신경망 학습](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch4)|2020.02.11|2020.02.12|
 |5|오차역전파법|||
 |6|학습 관련 기술들|||
 |7|합성곱 신경망(CNN)|||

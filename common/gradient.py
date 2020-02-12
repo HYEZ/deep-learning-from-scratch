@@ -7,7 +7,7 @@ def numerical_gradient(f, x):
 	it = np.nditer(x, flags=['multi_index'], op_flags=['readwrite'])
 	while not it.finished:
 		idx = it.multi_index # 배열의 인덱스를 튜플로 반환
-		print(idx)
+		# print(idx)
 		tmp_val = x[idx]
 
 		# f(x+h) 계산

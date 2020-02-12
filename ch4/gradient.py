@@ -26,7 +26,7 @@ def numerical_gradient(f, x):
 	return grad
 
 grad = numerical_gradient(function_2, np.array([3.0, 4.0]))
-print(grad)
+# print(grad)
 
 # 경사하강법
 def gradient_descent(f, init_x, lr=0.01, step_num=100):
@@ -40,7 +40,7 @@ def gradient_descent(f, init_x, lr=0.01, step_num=100):
 
 init_x = np.array([-3.0, 4.0])
 a = gradient_descent(function_2, init_x, lr=0.1, step_num=100)
-print(a)
+# print(a)
 
 
 
