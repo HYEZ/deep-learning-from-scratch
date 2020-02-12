@@ -4,4 +4,5 @@ import numpy as np
 from common.functions import *
 from common.gradient import *
 
-class 
+class TwoLayerNet:
+	
