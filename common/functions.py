@@ -24,13 +24,9 @@ def mean_squared_error(y, t):
 # 	return -np.sum(t * np.log(y + delta)) # log0 방지
 
 def cross_entropy_error(y, t):
-	print(y)
-	print("aa", y.ndim)
 	delta = 1e-7
 	if y.ndim == 1:
 		t = t.reshape(1, t.size)
 		y = y.reshape(1, y.size)
 	batch_size = y.shape[0]
-	print("batch_size", batch_size)
-	print(y[np.arange(batch_size), t])
 	return -np.sum(np.log(y[np.arange(batch_size), t])) / batch_size

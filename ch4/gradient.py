@@ -27,3 +27,21 @@ def numerical_gradient(f, x):
 
 grad = numerical_gradient(function_2, np.array([3.0, 4.0]))
 print(grad)
+
+# 경사하강법
+def gradient_descent(f, init_x, lr=0.01, step_num=100):
+	x = init_x
+
+	for i in range(step_num):
+		grad = numerical_gradient(f, x)
+		x -= lr * grad # 미분값만큼 x 줄여나감, lr은 학습률(learning rate)
+
+	return x
+
+init_x = np.array([-3.0, 4.0])
+a = gradient_descent(function_2, init_x, lr=0.1, step_num=100)
+print(a)
+
+
+
+
