@@ -64,26 +64,29 @@ class Affine:
 		return dx
 
 class SoftmaxWithLoss:
-	def __init__(self):
-		self.loss = None # loss
-		self.y = None # softmax 출력
-		self.t = None # 정답레이블 (one-hot vector)
+    def __init__(self):
+        self.loss = None # 손실함수
+        self.y = None    # softmax의 출력
+        self.t = None    # 정답 레이블(원-핫 인코딩 형태)
+        
+    def forward(self, x, t):
+        self.t = t
+        self.y = softmax(x)
+        self.loss = cross_entropy_error(self.y, self.t)
+        
+        return self.loss
 
-	def forward(self, x, t):
-		self.t = t
-		self.y = softmax(x)
-		self.loss = cross_entropy_error(self.y, self.t)
-		return self.loss
+    def backward(self, dout=1):
+        batch_size = self.t.shape[0]
+        if self.t.size == self.y.size: # 정답 레이블이 원-핫 인코딩 형태일 때
+            dx = (self.y - self.t) / batch_size
+        else:
+            dx = self.y.copy()
+            dx[np.arange(batch_size), self.t] -= 1
+            dx = dx / batch_size
+        
+        return dx
 
-	def backward(self, dout=1):
-		batch_size = self.t.shape[0]
-		# print(self.y)
-		# print(self.t)
-		# print( self.y-self.t)
-		# print(batch_size)
-		dx = (self.y - self.t) / batch_size
-
-		return dx
 
 # test = np.array([[1, 2], [3, 4]])
 # b = np.array([1, 2])
