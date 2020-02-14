@@ -15,7 +15,7 @@
 |5|[오차역전파법](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch5)|2020.02.12|2020.02.13|
 |6|[학습 관련 기술들](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch6)|2020.02.13|2020.02.13|
 |7|[합성곱 신경망(CNN)](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch7)|2020.02.14|2020.02.14|
-|8|[딥러닝](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch8)|||
+|8|[딥러닝](https://github.com/HYEZ/deep-learning-from-scratch/tree/master/ch8)|2020.02.14||
 |A|A Softmax-with-Loss 계층의 계산 그래프|2020.02.13|2020.02.13|
 
 ## Usage
